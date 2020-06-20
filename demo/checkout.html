@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>checkout</title>
+    <script>
+        function check()
+        {
+            alert("訂單完成，感謝你的購買！")
+        } 
+       
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/updownbutton.css">
+    
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--LOGO位置-->
+        <a class="navbar-brand" href="index.html"><img src="pic/logo.jpg" width="200px" height="150px" alt="LOGO" style="border-radius: 10px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--選單中心區-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item dropdown" style="position: relative; left:3cm; font-size: 25px;">
+                    <a class="navbar-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          人偶
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="part1.html">單隻人偶</a>
+                        <a class="dropdown-item" href="part2.html">一組人偶(5隻一組)</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style="position: relative; left:7cm; font-size: 25px;">
+                    <a class="navbar-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          組裝型
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="product2.html">組裝型</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style="position: relative; left:11cm; font-size: 25px;">
+                    <a class="navbar-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          特別版
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                        <a class="dropdown-item" href="product1.html">裝飾</a>
+                    </div>
+                </li>
+            </ul>
+            <!--右側區塊-->
+            
+             <a href="login.html"><img class="icon" src="pic/member.png" alt="會員" title="會員中心" height="50px" width="50px"></a>
+            <a href="cart.html"><img class="icon" src="pic/cart.jpg" alt="購物車" title="購物車" height="50px" width="50px"></a>
+            <a href="comments.html"><img class="icon" src="pic/comment.jpg" alt="評論" title="賣場評論" height="50px" width="50px"></a>
+            <a href="aboutus.html"><img class="icon" src="pic/us.jpg" alt="關於我們" title="關於我們" height="50px" width="50px"></a>
+            <button type="submit" class="btn btn-primary"><a href="index.html">登出</a></button>
+
+            
+        </div>
+    </nav>
+    <!--留言區-->
+    <br/><br/>
+   <section class="detail2"> 
+         <center> 
+        <table>
+          <tr>
+            <td><img src="pic/1.jpg" width="100px"></td>
+            <td>名稱:裝飾型手電筒</td>
+            <td>
+                    <div class="half">
+                        <ul class="btn-numbox">
+                            <li><span class="number">數量</span></li>
+                            <li>
+                                <ul class="count">
+                                    <li><span id="num-jian" class="num-jian bg-white">-</span></li>
+                                    <li><input type="text" class="input-num bg-white" id="input-num" value="0" /></li>
+                                    <li><span id="num-jia" class="num-jia bg-white">+</span></li>
+                                </ul>
+                            </li>
+                　　　  </ul>
+                    </div>
+            </td>
+          
+            <td><button type="button" class="btn btn-outline-danger ">刪除</button></td>
+          </tr>
+        </table>
+       <br>
+      <p>總金額：700元整</p>
+      <script src="js/goodupdown.js" type="text/javascript"></script>
+     </center>
+    
+        <div class="A">
+            <form method="post" action=""><center><h5>訂單</h5><br>
+            <div class="B">
+            <br>姓名：<input type="text" name="username" size="20" ><br><br>
+            電話：<input type="text" name="phoneunmber" size="20" ><br><br>
+            住址：<input type="text" name="address" size="20" ><br><br>
+            <button type="button" class="btn btn-outline-danger "><a href="cart.html">上一步</button></a>&nbsp&nbsp
+            <button type="button" class="btn btn-outline-primary" onclick="check()">完成訂單</button>
+            <br>
+            <br>
+            </center>
+
+          
+            
+    </section>
+    <!--footer-->
+    <div class="row">
+                                        <div class="col-md-12" id="footer" align="center">
+                                            Copyright &copy by TEAM 31
+                                        </div>
+                                    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</html>

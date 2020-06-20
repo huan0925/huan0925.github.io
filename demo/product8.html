@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LEGO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css" media="screen">
+    .col-lg-6 {
+
+        max-width: none;
+    }
+    </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--LOGO位置-->
+        <a class="navbar-brand" href="index.html"><img src="pic/logo.jpg" width="200px" height="150px" alt="LOGO" style="border-radius: 10px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--選單中心區-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                <li class="nav-item dropdown" style="position: relative; left:3cm; font-size: 25px;">
+                    <a class="navbar-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          人偶
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="part1.html">單隻人偶</a>
+                        <a class="dropdown-item" href="part2.html">一組人偶(5隻一組)</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style="position: relative; left:7cm; font-size: 25px;">
+                    <a class="navbar-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          組裝型
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="product2.html">組裝型</a>
+                        
+                    </div>
+                </li>
+                <li class="nav-item dropdown" style="position: relative; left:11cm; font-size: 25px;">
+                    <a class="navbar-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          特別版
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        
+                        <a class="dropdown-item" href="product1.html">裝飾</a>
+                    </div>
+                </li>
+            </ul>
+            <!--右側區塊-->
+            
+             <a href="login.html"><img class="icon" src="pic/member.png" alt="會員" title="會員中心" height="50px" width="50px"></a>
+            <a href="cart.html"><img class="icon" src="pic/cart.jpg" alt="購物車" title="購物車" height="50px" width="50px"></a>
+            <a href="comments.html"><img class="icon" src="pic/comment.jpg" alt="評論" title="賣場評論" height="50px" width="50px"></a>
+            <a href="aboutus.html"><img class="icon" src="pic/us.jpg" alt="關於我們" title="關於我們" height="50px" width="50px"></a>
+            <button type="submit" class="btn btn-primary"><a href="index.html">登出</a></button>
+
+            
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <!--商品圖片-->
+            <div class="col-lg-6">
+                <img src="pic/8.jpg" alt="配件" height="400px" width="400px">
+                </div>
+                <!--購買選單-->
+                <div class="col-lg-6">
+                    <p class="name">壞壞的人偶<p>
+                           
+                            <p class="detail">售價:NTD100</p>
+                            </select>
+                            <p class="detail">數量:</p>
+                                <p>庫存:10</p>
+                                <select size="1" name="尺寸">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select><br>
+                            <br>
+                            <p id=shopcar class="detail"><a href="cart.html">加入購物車</a></p><br><br><br><br>
+                </div>
+                <hr>
+                <!--商品介紹書籤-->
+                <div class="col-md-12">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+        			<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          			商品介紹
+        			</button>
+      			</h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    就是一個看起來壞壞的壞人。
+                                </div>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    
+                                </div>
+                            </div>
+                            <!--footer-->
+                            <div class="row">
+                                        <div class="col-md-12" id="footer" align="center">
+                                            Copyright &copy by TEAM 31
+                                        </div>
+                                    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</html>
