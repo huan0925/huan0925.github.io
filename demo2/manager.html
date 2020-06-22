@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--LOGO位置-->
+        <a class="navbar-brand" href="index.html"><img src="pic/logo.jpg" width="200px" height="150px" alt="LOGO" style="border-radius: 10px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <section>
+        <div class="container-fluid pt-3">
+            <div class="row">
+                <div class="col-3">
+                  <div class="list-group thiscenter" id="list-tab" role="tablist">
+                    <a class="list-group-item  list-group-item-action list-group-item-light active" id="list-home-list" data-toggle="list" href="#list-add" role="tab" aria-controls="add">新增商品</span></a>
+                    <a class="list-group-item list-group-item-action list-group-item-light" id="list-profile-list" data-toggle="list" href="#list-change" role="tab" aria-controls="change">修改商品</a>
+                    <a class="list-group-item   list-group-item-action list-group-item-light" id="list-messages-list" data-toggle="list" href="#list-delete" role="tab" aria-controls="delete">刪除商品</a>
+                    <a class="list-group-item   list-group-item-action list-group-item-light" id="list-settings-list" data-toggle="list" href="#list-browse" role="tab" aria-controls="browse">瀏覽訂單</a>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-add" role="tabpanel" aria-labelledby="list-add-list">
+                        <h3 class="thiscenter">這裡是新增商品</h3>
+                    </div>
+                    <div class="tab-pane fade" id="list-change" role="tabpanel" aria-labelledby="list-change-list">
+                        <h3 class="thiscenter">這裡是修改商品</h3>
+                    </div>
+                    <div class="tab-pane fade" id="list-delete" role="tabpanel" aria-labelledby="list-delete-list">
+                        <h3 class="thiscenter">這裡是刪除商品</h3>
+                    </div>
+                    <div class="tab-pane fade" id="list-browse" role="tabpanel" aria-labelledby="list-browse-list">
+                        <h3 class="thiscenter">這裡是瀏覽訂單</h3>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+    
+     <!--footer-->
+    <div class="row">
+        <div class="col-md-12" id="footer" align="center" style="position: relative; top: 8cm;">
+            Copyright &copy by TEAM 31
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</html>

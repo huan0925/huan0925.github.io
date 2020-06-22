@@ -1,0 +1,80 @@
+[class*="row"] {
+    padding: 10px;
+}
+
+
+body{
+	background-color: #FF8000;
+}
+
+.a{
+	color: black;
+    font-size: 24px;
+    
+    font-family: Serif;
+}
+
+.team{
+	font-family: 微軟正黑體;
+	font-size: 30px;
+}
+
+.icon{
+	border-radius: 50px;
+}
+
+.icon1{
+	border-radius: 10px;
+}
+
+#footer{
+	background-color: #FFD306;
+
+}
+
+.comments{
+	font-family: 微軟正黑體;
+	color: #A23400;
+}
+
+.btn {
+    color: white;
+    background-color: #444444;
+    border-color: #444444;
+}
+
+.name{
+	color: black;
+    font-size: 40px;
+    font-family: 微軟正黑體;
+}
+
+.detail{
+	font-family: 微軟正黑體; 
+	font-size: 30px;
+}
+
+.detail2{
+	font-family: 微軟正黑體; 
+	font-size: 20px;
+}
+.A{
+        position: center center;
+        margin:40px 200px;
+        padding:70px;
+        border-radius:25px; 
+        background-color:#FFD306; 
+      }
+
+.B{ 
+        position: center center;
+        background-color:#EDD9A3;
+        border-radius:25px; 
+       }
+       
+.link{
+	color: #B15BFF;
+	font-size: 20px;
+	font-family: 微軟正黑體;
+	font-weight: bold;
+}

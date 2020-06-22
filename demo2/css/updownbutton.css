@@ -1,0 +1,60 @@
+/* 商品加減按鈕的CSS */
+ul,li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.btn-numbox {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.btn-numbox li {
+    float: left;
+}
+
+.btn-numbox li .number,
+.kucun {
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.btn-numbox .count {
+    overflow: hidden;
+    margin: 0 16px 0 -20px;
+}
+
+.btn-numbox .count .num-jian,
+.input-num,
+.num-jia {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #e6e6e6;
+}
+.btn-numbox .count .input-num {
+    width: 70px;
+    height: 38px;
+    border-left: 0;
+    border-right: 0;
+}
+/* 商品加減按鈕的CSS END*/
