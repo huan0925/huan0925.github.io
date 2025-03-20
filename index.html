@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>倒數計時器</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            opacity: 0.8;
+            pointer-events: none;
+            animation: fall linear forwards;
+            top: 0; /* 從最上方開始掉落 */
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-center">
+    <h1 class="text-danger mb-4">與寶子見面</h1>
+    <div id="countdown" class="display-4 text-dark"></div>
+    <div id="message" class="h4 text-danger mt-4"></div>
+    
+    <div id="chatContainer" class="mt-4 d-flex align-items-center">
+        <input type="text" id="apiKeyInput" placeholder="請輸入你的 API 金鑰" class="form-control mr-2" style="max-width: 300px;"/>
+        <input type="text" id="userInput" placeholder="輸入訊息..." class="form-control mr-2" style="max-width: 300px;"/>
+        <button id="sendButton" class="btn btn-danger flex-grow-1 form-control">發送訊息</button>
+    </div>
+    
+    <div id="dialogueContainer" class="mt-4 border border-danger rounded p-2" style="width: 80%; max-height: 300px; overflow-y: auto; text-align: left;">
+        <!-- 多輪對話區塊 -->
+    </div>
+
+    <div id="response"></div>
+    <div id="modelReply" class="mt-4 h4 text-dark"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        const countdownDate = new Date("2025-03-30T09:00:00").getTime();
+
+        const countdownFunction = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `${days}天 ${hours}小時 ${minutes}分鐘 ${seconds}秒`;
+
+            if (days === 7) {
+                document.getElementById("message").innerHTML = "再過一個禮拜就見到寶貝了！";
+            } else if (days === 6) {
+                document.getElementById("message").innerHTML = "期待與寶貝的第一次見面！";
+            } else if (days === 5) {
+                document.getElementById("message").innerHTML = "只剩五天，心情越來越激動！";
+            } else if (days === 4) {
+                document.getElementById("message").innerHTML = "四天後就能見到寶貝了，真期待！";
+            } else if (days === 3) {
+                document.getElementById("message").innerHTML = "三天，快來了！準備好見面了嗎？";
+            } else if (days === 2) {
+                document.getElementById("message").innerHTML = "兩天，心跳加速！";
+            } else if (days === 1) {
+                document.getElementById("message").innerHTML = "明天就能見到寶貝了，太興奮了！";
+            } else {
+                document.getElementById("message").innerHTML = ""; // 清空訊息
+            }
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "要見到寶子了！！！";
+                document.getElementById("message").innerHTML = "";
+                createConfetti();
+            }
+        }, 1000);
+
+        document.getElementById("sendButton").addEventListener("click", () => {
+            const userInput = document.getElementById("userInput").value;
+            const apiKey = document.getElementById("apiKeyInput").value; // 獲取 API 金鑰
+            sendMessageToChatGPT(userInput, apiKey);
+        });
+
+        function createConfetti() {
+            const colors = ['#ff0', '#ff5733', '#33ff57', '#3357ff', '#ff33a1']; // 定義多種顏色
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)]; // 隨機選擇顏色
+                confetti.style.left = Math.random() * 100 + "vw"; // 隨機水平位置
+                confetti.style.animationDuration = Math.random() * 2 + 3 + "s"; // 隨機動畫持續時間
+                document.body.appendChild(confetti);
+
+                // 在動畫結束後移除 confetti
+                confetti.addEventListener("animationend", () => {
+                    confetti.remove();
+                });
+            }
+        }
+    </script>
+</body>
+</html>
